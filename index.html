@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Self Map</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #007BFF, #0056D6);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .section button:hover {
+            background: linear-gradient(90deg, #0056b3, #003c99);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .section button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-content {
+            display: none;
+            margin-top: 15px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: #f9fbfc;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        ul li {
+            margin: 8px 0;
+            padding: 8px;
+            background: #e8eff4;
+            border-radius: 5px;
+            border: 1px solid #d1dae3;
+        }
+    </style>
+    <script>
+        function toggleContent(sectionId) {
+            const content = document.getElementById(sectionId);
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Jhon Marc C. Bautista</h1>
+            <p>Interactive Self Map</p>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('nickname')">Nicknames</button>
+            <div id="nickname" class="section-content">
+                <ul>
+                    <li>Marc</li>
+                    <li>JM</li>
+                    <li>Toy</li>
+                    <li>JMB</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('hobbies')">Hobbies</button>
+            <div id="hobbies" class="section-content">
+                <ul>
+                    <li>Coding</li>
+                    <li>Cooking</li>
+                    <li>Playing video games</li>
+                    <li>Playing Basketball</li>
+                    <li>Programming</li>
+                    <li>Sleeping</li>
+                    <li>Exercise</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('likes')">Likes</button>
+            <div id="likes" class="section-content">
+                <ul>
+                    <li>Technology and gadgets</li>
+                    <li>Positive people</li>
+                    <li>Nature</li>
+                    <li>Animals</li>
+                    <li>Quiet Places</li>
+                    <li>Learning new programming languages</li>
+                    <li>Creative problem-solving</li>
+                    <li>Spending time with friends and family</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('dislikes')">Dislikes</button>
+            <div id="dislikes" class="section-content">
+                <ul>
+                    <li>Unnecessary things</li>
+                    <li>Noisy environment</li>
+                    <li>Lack of productivity</li>
+                    <li>Bullies</li>
+                    <li>Negative, toxic people</li>
+                    <li>People taking advantage of me</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('everything-i-love')">Everything I Love</button>
+            <div id="everything-i-love" class="section-content">
+                <ul>
+                    <li>Programming</li>
+                    <li>Gardening</li>
+                    <li>My Parents</li>
+                    <li>Helping others solve tech issues</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('random-things')">Random Things</button>
+            <div id="random-things" class="section-content">
+                <ul>
+                    <li>Dreaming of creating a successful business</li>
+                    <li>Enjoying late-night coding sessions</li>
+                    <li>Favorite color: Blue</li>
+                    <li>Big fan of BTS and NCT</li>
+                    <li>Handsome</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('dream-job')">Dream Job</button>
+            <div id="dream-job" class="section-content">
+                <ul>
+                    <li>Pilot</li>
+                    <li>Computer Engineer</li>
+                    <li>Surgeon</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button onclick="toggleContent('personality')">Personality</button>
+            <div id="personality" class="section-content">
+                <p>
+                    I’d describe myself as a friendly and cheerful person who loves spreading positivity and making people smile. I’m very family-oriented and value the strong connections I have with my loved ones. I’m also a loving and caring person who always tries to be there for others. I enjoy learning new things and growing, both personally and professionally, and I try to bring a sense of joy and purpose to everything I do.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Jhon Marc C. Bautista. All rights reserved.
+    </footer>
+</body>
+</html>
